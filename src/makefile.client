@@ -1,0 +1,20 @@
+IDIR = ../include
+CC = gcc
+CFLAGS = -ggdb -I$(IDIR) -Wall
+ODIR = obj
+
+# Liste objekata
+OBJ = $(ODIR)/client.o $(ODIR)/utils.o
+
+# Pravilo za .o fajlove (pravi obj folder usput)
+$(ODIR)/%.o: %.c
+	@mkdir -p $(ODIR)
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+# Finalni binarni fajl
+client: $(OBJ)
+	$(CC) -o client $(OBJ) $(CFLAGS) -lm
+
+.PHONY: clean
+clean:
+	rm -f client $(ODIR)/client.o $(ODIR)/utils.o
