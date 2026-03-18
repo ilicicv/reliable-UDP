@@ -1,5 +1,5 @@
 # Pouzdan prenos preko UDP protokola
-Projekat implementira **pouzdan prenos podataka** preko **UDP** protokola korišćenjem **Stop-and-Wait** mehanizma. Sistem koristi prilagođeno zaglavlje (custom header), potvrde o prijemu (**ACK**) i automatsku retransmisiju paketa u slučaju isteka vremenskog ograničenja (**timeout**).
+Ovaj projekat implementira **pouzdan prenos podataka** preko **UDP** protokola zasnovan na **Stop-and-Wait** mehanizmu. Sistem koristi prilagođeno zaglavlje (custom header), potvrde o prijemu (**ACK**) i automatsku retransmisiju paketa u slučaju isteka vremenskog ograničenja (**timeout**).
 
 ## Build
 
@@ -26,7 +26,7 @@ Nakon što je server pokrenut, pokrenuti klijenta i navesti putanju do datoteke 
 ```bash
 ./client <naziv_datoteke> [ip_adresa]
 ```
-**Napomena:** Opciono može se navesti IP adresa servera kao drugi argument. Ukoliko adresa nije navedena, klijent podrazumeva da se server nalazi na lokalnom računaru (**localhost**).
+**Napomena:** Opciono, može se navesti IP adresa servera kao drugi argument. Ukoliko adresa nije navedena, klijent podrazumeva da se server nalazi na lokalnom računaru (**localhost**).
 
 
 
