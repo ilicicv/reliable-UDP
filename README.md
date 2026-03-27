@@ -1,5 +1,4 @@
 # Pouzdan prenos preko UDP protokola
-**Pouzdan prenos podataka** preko **UDP** protokola zasnovan na **Stop-and-Wait** mehanizmu. Sistem koristi prilagođeno zaglavlje (custom header), potvrde o prijemu (**ACK**) i automatsku retransmisiju paketa u slučaju isteka vremenskog ograničenja (**timeout**).
 
 ## Build
 
@@ -11,7 +10,7 @@ make
 
 
 
-## Uputstvo za pokretanje 
+## Pokretanje 
 
 ### 1. Server
 Iz `src` direktorijuma prvo pokrenuti server koji će čekati dolazne pakete:
@@ -26,7 +25,7 @@ Nakon što je server pokrenut, pokrenuti klijenta i navesti putanju do datoteke 
 ```bash
 ./client <naziv_datoteke> [ip_adresa]
 ```
-Opciono, može se navesti IP adresa servera. Ukoliko adresa nije navedena, klijent smatra da se server nalazi na lokalnom računaru.
+Ukoliko IP adresa nije navedena, klijent smatra da se server nalazi na lokalnom računaru.
 
 
 
